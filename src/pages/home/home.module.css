@@ -1,0 +1,115 @@
+.home{
+    min-width: 100vw;
+    overflow-x: hidden;
+    background: rgb(2,0,36);
+    background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(58,121,9,1) 0%, rgba(255,255,255,1) 48%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: calc(10px + 2vmin);
+}
+.header{
+    display: flex;
+    padding: 5px 20px;
+    align-items: center;
+    justify-content: center;
+}
+.intro{
+    height: auto;
+    max-width: 80vmin;
+}
+.headerTextContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex:1;
+}
+.headerText{
+    font-size: 54px;
+    font-weight: bolder;
+    line-height: 80px;
+    font-family: 'Poppins', sans-serif;
+    color: #282c34;
+    max-width: 80vw;
+}
+.navButton{
+    color:  #ffffff;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: rgba(58,121,9,1);
+    background-color: rgba(58,121,9,1);
+    font-size: 20px;
+    max-width: 200px;
+    font-family: 'Open Sans', sans-serif;
+    padding: 8px 15px;
+    margin-bottom: 20px;
+}
+.modal{
+    position: fixed;
+    z-index: 1;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left:0;
+    background-color: rgba(2,0,36,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modalForm{
+    background-color: #ffffff;
+    max-width: 500px;
+    /* min-width: 500px; */
+    padding:40px 20px;
+    margin: 20px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+}
+.modalDiv{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.modalDiv label{
+    font-size: 18px;
+    margin-bottom: 0px;
+    color:rgba(58,121,9,1);
+}
+.modalDiv input,select,option{
+    font-size: 20px !important;
+    background: #E9EAFF;
+    border-color: transparent;
+    border-radius: 6px;
+    padding: 5px;
+}
+.modalButton{
+    margin: 20px 10px !important;
+    border-color: 0px;
+    border-radius: 4px;
+    border-width: 1px;
+    padding: 10px;
+    background-color: rgba(58,121,9,1);
+    font-size: 20px;
+    color: #ffffff;
+}
+.close{
+    text-align: right;
+    font-size: 40px;
+    font-weight: bolder;
+    width: 40px;
+    align-self: flex-end;
+    background-color: transparent;
+    border: 0px transparent;
+}
+
+@media(max-width: 900px) {
+    .headerText{
+        font-size: 29px;
+        line-height: 40px;
+        
+    }
+    .headerTextContainer{
+        padding: 0px 30px;
+    }
+}
