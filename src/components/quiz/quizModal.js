@@ -9,7 +9,9 @@ const QuizModal = (props) => {
     //     props.history.push('/');
     //     return <></>
     // }
-    let { name, test, level } = props.location.state;
+    // let { name, test, level } = props.location.state;
+    
+    let { name, test, level } = props
 
     return(
         <>
@@ -20,7 +22,7 @@ const QuizModal = (props) => {
                     <div className={styles.qDiv}>
                         <p className={styles.brandLogo} style={{ color: 'black', textAlign: 'center' }}> &lt;PROVE/&gt;IT</p>
                         <div className="card-header"> 
-                        {name} 
+                        {props.name} 
                         Assessment</div>
                          <div className="card" style={{width: '18rem'}}>
                             <h3 className="card-header">Which html tag is used to display a table?</h3>

@@ -11,7 +11,7 @@ function App() {
       <Switch>
         <Route exact path='/take-test/:postId' component={Test}/>
         <Route exact path='/' component={Home}/>
-        <Route exact path='/quiz' component={QuizModal}/>
+        {/* <Route exact path='/quiz' component={QuizModal}/> */}
       </Switch>
     </BrowserRouter>
   );

@@ -37,9 +37,9 @@ const Test = (props) => {
     let { name, test, level } = props.location.state;
     return (
         <div className={styles.test}>
-            {
+            {/* {
                 quizModal&&<QuizModal  />
-            }
+            } */}
             <Navbar backgroundColor={'rgba(58,121,9,1)'} style={{ paddingTop: 10, paddingBottom: 10, }} />
 
                 <div className={styles.contain}>
@@ -66,10 +66,12 @@ const Test = (props) => {
                             <p>Sharable result</p>
                         </div>
                         <hr />
-                            <button 
+                        <button  onClick={()=> {setQuizModal(true) }}>Start</button>
+                        {/* <button 
                             onClick={()=> {
                                 setQuizModal(true)
-                            }}>Start</button>
+                            }}>Start</button> */}
+                            
                         {/* <div>
                         </div> */}
                     </div>
