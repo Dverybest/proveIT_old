@@ -13,13 +13,22 @@ const Home = (props)=> {
             pathname: `/take-test/${data.test}`,
             state: data
         });
+        console.log("checking props", props)
+        console.log(props.history)
     }
     return (
         <div className={styles.home} >
             {
                 openModal&&
-                <Modal close={()=>setOpenModal(false)} history={props.history} navigate={handleNavigate}/>
+                <Modal 
+                    close={()=>setOpenModal(false)} 
+                    history={props.history} 
+                    navigate={handleNavigate}
+                />
             }
+            {/* {
+                QuizModal&&<
+            } */}
             <NavBar getStarted={() => setOpenModal(true)}/>
             <header className={styles.header,'container px-0'}>
                 <div className='row px-0'>
