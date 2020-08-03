@@ -46,6 +46,7 @@ const Home = (props)=> {
 const Modal = ({close,navigate})=>{
    
     const [data,setData] = useState({name:'',test:'',level:''});
+    // const [quiz, setQuiz] = useState(false)
 
     const handleSubmit =(e)=>{
         e.preventDefault();
