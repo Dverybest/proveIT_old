@@ -6,8 +6,6 @@ import QuizModal from '../../components/quiz/quizModal';
 const Test = (props) => {
     const [quizModal, setQuizModal] = useState(false)
 
-    console.log("checking quizModal value", quizModal)
-
     // handle Submit 
     const handleSubmitStart = () => {
         // props.history.push({
@@ -15,7 +13,6 @@ const Test = (props) => {
         //     state: data
         // })
         setQuizModal(true)
-        console.log("checking quizModal value", quizModal)
     }
 
 

@@ -1,29 +1,6 @@
 .test{
     min-height: 100vh;
 }
-.toolBar{
-    /* box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); */
-    background: #fff;
-    min-height: 50px;
-    display: flex;
-    align-items: center;
-    padding: 0px 40px;
-}
-.toolBar p{
-    margin: 0;
-    font-size: 18px;
-}
-.roundName{
-    border-radius: 20px;
-    width: 40px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    margin-right: 50px;
-    height: 40px;
-    display: flex;
-    background-color: rgba(58,121,9,1);;
-}
 .roundName p{
     margin: auto;
     color: #fff;
@@ -33,8 +10,10 @@
 }
 .qDiv{
     max-width: 750px;
+    max-height: 90vh;
     background-color: #eee;
     padding: 20px;
+    font-size: 1.4em;
     border-radius: 2px;
     margin: 30px 15px;
     text-align: center;
@@ -61,6 +40,11 @@
     text-transform: uppercase;
     margin-top: 40px;
 }
-/* .header {
+.header {
 width: 70%;
-} */
+}
+.next {
+    background-color: rgba(58,121,9,1);
+    width: 30px;
+
+}
