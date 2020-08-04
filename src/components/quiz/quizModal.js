@@ -94,10 +94,6 @@ var quiz = [
     console.log('checking input', input)
 
     return(
-        <div className={styles.test}>
-            <Navbar backgroundColor={'rgba(58,121,9,1)'} style={{ paddingTop: 10, paddingBottom: 10, }} />
-
-                <div className={styles.contain}>
                     <div className={styles.qDiv}>
                         <p className={styles.brandLogo} style={{ color: 'black', textAlign: 'center' }}> &lt;PROVE/&gt;IT</p>
                         <p>{`${test} Skills Assessment`}</p>
@@ -126,10 +122,7 @@ var quiz = [
                                 <button href="#" onClick={handleSubmit} className="next mt-4">Next</button>
                         </div> 
                        
-                    </div>
-               </div>
-                
-        </div>
+                    </div>                
 
     )
 }

@@ -1,6 +1,4 @@
-.test{
-    min-height: 100vh;
-}
+
 .roundName p{
     margin: auto;
     color: #fff;
@@ -9,8 +7,8 @@
     font-size: 18px;
 }
 .qDiv{
-    max-width: 750px;
-    max-height: 90vh;
+    min-width: 850px;
+    /* max-height: 90vh; */
     background-color: #eee;
     padding: 20px;
     font-size: 1.4em;
