@@ -27,7 +27,7 @@ const Test = (props) => {
             <Navbar backgroundColor={'rgba(58,121,9,1)'} style={{ paddingTop: 10, paddingBottom: 10, }} />
 
             <div className={styles.contain}>
-                {quizModal ?
+                { quizModal ?
 
                     <QuizModal test={test} />
                     :

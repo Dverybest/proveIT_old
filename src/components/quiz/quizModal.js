@@ -21,7 +21,8 @@ var quiz = {
         },
         {
             question: 'Which statement is false about the <!Doctype html> declaration',
-            option: ['Its used to instruct the browser about the type of html', 'Its a html tag', 'Its used to declare the document type', 'All of the above']
+            option: ['Its used to instruct the browser about the type of html', 'Its a html tag', 'Its used to declare the document type', 
+            'All of the above']
         },
         {
             question: 'Which one is not a list element in html?',
@@ -61,8 +62,9 @@ var quiz = {
         },
         {
             question: '== and ===',
-            option: ['=== operators compares data type which == compares the value', 'They both return a boolean value', 'They are used to check type correction', 'They are both comparison operators']
-        },
+            option: ['=== operators compares data type which == compares the value', 'They both return a boolean value', 'They are used to check type correction',
+             'They are both comparison operators']
+        }
 
     ], 
     css: [
@@ -120,7 +122,9 @@ var quiz = {
                                 
                                 </div>
                                 
+                                <button href="#" onClick={null} className="next mt-4">Prev</button> {''}
                                 <button href="#" onClick={handleSubmit} className="next mt-4">Next</button>
+
                         </div> 
                        
                     </div>                
