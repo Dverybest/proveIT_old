@@ -9,73 +9,74 @@ const QuizModal = (props) => {
     const [input, setInput] = useState({})
 
    // Array of questions starts
-var quiz = [ 
-    {
-        html: {
+var quiz = {
+    html: [
+        {
             question: 'Which html tag is used to display a table?',
             option: ['<table>', '<tbody>', '<td>', '<thead>']
         },
-        html: {
+        {
             question: 'one of these is not a form element type in html5',
             option: ['email', 'number', 'date', 'web']
         },
-        html: {
+        {
             question: 'Which statement is false about the <!Doctype html> declaration',
             option: ['Its used to instruct the browser about the type of html', 'Its a html tag', 'Its used to declare the document type', 'All of the above']
         },
-        html: {
+        {
             question: 'Which one is not a list element in html?',
             option: ['ul', 'em', 'ol', 'dl']
         },
-        html: {
+        {
             question: 'Which of these tags is not used to define the layouts of a page',
             option: [ '<header>', '<footer>', '<stron>', '<aside>']
         },
-        html: {
+        {
             question: 'one of these is not a html entity characters',
             option: ['$', '&nbsp', '&lt', '&gt']
         }
         
-    }, 
-    {
-        javascript: {
+    ], 
+
+    javascript: [
+        {
             question: 'One of these is not a data type in javascript',
             option: ['null', 'undefined', 'object', 'int']
         },
-        javascript: {
+        {
             question: 'Which of these is an array method in javascript',
             option: ['unshift()', 'toUpper()', 'NaN()', 'sum()']
         },
-        javascript: {
+        {
             question: 'Which of these is a js method for accessing html element',
             option: ['getElementById', 'querySelector', 'getElementsByClassname', 'getElementByTag']
         },
-        javascript: {
+        {
             question: 'One of these is not used to declare data types in javascript',
             option: ['var', 'const', 'def', 'let']
         },
-        javascript: {
+        {
             question: 'One of these is not used to declare data types in javascript',
             option: ['var', 'const', 'def', 'let']
         },
-        javascript: {
+        {
             question: '== and ===',
             option: ['=== operators compares data type which == compares the value', 'They both return a boolean value', 'They are used to check type correction', 'They are both comparison operators']
         },
 
-    }, 
-    {
-        css: {
+    ], 
+    css: [
+        {
             question: 'one of these is a way to link css to a file',
             option: ['inline', 'external', 'internal', 'outer']
         },
-        css: {
+        {
             question: '',
             option: ['inline', 'external', 'internal', 'outer']
         }
-    }
+    ]
     
-]
+}
 
     // Array of questions ends
 
