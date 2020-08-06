@@ -1,19 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '../nav/navbar';
 import styles from './test.module.css';
+import QuizModal from '../../components/quiz/quizModal';
 
 const Test = (props) => {
-   
-    if (!props.location.state){
+    const [quizModal, setQuizModal] = useState(false)
+
+    // handle Submit 
+    const handleSubmitStart = () => {
+        // props.history.push({
+        //     pathname: `/quiz/:${data.test}`,
+        //     state: data
+        // })
+        setQuizModal(true)
+    }
+
+
+    if (!props.location.state) {
         props.history.push('/');
         return <></>
     }
     let { name, test, level } = props.location.state;
+
     return (
         <div className={styles.test}>
             <Navbar backgroundColor={'rgba(58,121,9,1)'} style={{ paddingTop: 10, paddingBottom: 10, }} />
 
-                <div className={styles.contain}>
+            <div className={styles.contain}>
+                { quizModal ?
+
+                    <QuizModal test={test} />
+                    :
                     <div className={styles.qDiv}>
                         <p className={styles.brandLogo} style={{ color: 'black', textAlign: 'center' }}> &lt;PROVE/&gt;IT</p>
                         <p>{`${level} ${test} Skills Assessment`}</p>
@@ -37,18 +54,15 @@ const Test = (props) => {
                             <p>Sharable result</p>
                         </div>
                         <hr />
-                            <button>Start</button>
-                        {/* <div>
-                        </div> */}
+                        <button onClick={() => handleSubmitStart(true)}>Start</button>
+
                     </div>
-               </div>
-                
-         
+                }
+
+
+            </div>
         </div>
-    )
+    );
 }
 
 export default Test;
-{/* <div className={styles.toolBar}>
-    <div className={styles.roundName}><p>{name.split(" ")[0][0] + name.split(" ")[1][0]}</p></div>
-</div> */}
