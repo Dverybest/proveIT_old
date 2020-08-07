@@ -3,7 +3,7 @@ import './App.css';
 import Home from './pages/home/home';
 import Test from './pages/takeTest/test'
 import {Route,Switch,BrowserRouter} from 'react-router-dom';
-import QuizModal from './components/quiz/quizModal';
+import Quiz from './pages/takeTest/quiz';
 
 function App() {
   return (
