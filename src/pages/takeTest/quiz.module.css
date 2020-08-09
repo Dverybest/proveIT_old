@@ -1,0 +1,93 @@
+
+.roundName p{
+    margin: auto;
+    color: #fff;
+    font-weight:bold;
+    flex: 1;
+    font-size: 18px;
+}
+.qDiv{
+    min-width: 850px;
+    max-width: 950px;
+    /* min-height: 90vh; */
+    /* background-color: #000; */
+    background-color: #eee;
+    /* padding: 20px; */
+    font-size: 1.4em;
+    border-radius: 2px;
+    margin: 30px 15px;
+    text-align: center;
+    border-width: 1px;
+    border-color: #888;
+
+}
+.contain{
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.qDiv p{
+    margin-top: 10px;
+}
+.brandLogo{
+    font-family: 'Rakkas',  sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 36px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 40px;
+}
+.cardHeader {
+width: 100%;
+background-color: #fff;
+padding: 25px 25px;
+margin-bottom: -0.5rem;
+border: #eee 1px solid;
+font-size: 1em;
+}
+.footer {
+    display: flex;
+}
+.button {
+    margin: 20px 10px 20px 630px!important;
+    border-color: 0px;
+    border-radius: 4px;
+    border-width: 1px;
+    padding: 10px;
+    background-color: rgba(58,121,9,1);
+    font-size: 20px;
+    color: #ffffff;
+    width: 200px;
+}
+#background {
+    background-color: #f2ffe6;
+    padding: 13px 15px 13px 35px;
+    border-bottom: solid 1px #b3b3b3;
+    font-size: 1em;
+}
+.formCheckInput {
+    height: 23px;
+    width: 23px;
+    margin-right: 7px;
+
+}
+/* Progress bar style starts */
+#myProgress {
+    width: 100%;
+    background-color: #eee;
+    border: solid 1px #b3b3b3;
+}
+#myBar {
+    width: 2%;
+    height: 15px;
+    background-color: rgba(58,121,9,1);
+}
+h5 {
+    /* background-color: blue; */
+    padding: 10px;
+    margin: auto;
+}
