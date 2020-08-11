@@ -15,11 +15,6 @@ const Test = (props) => {
         setQuiz(true)
     }
 
-
-
-
-
-
     if (!props.location.state) {
         props.history.push('/');
         return <></>
