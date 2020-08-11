@@ -63,8 +63,8 @@ var quiz = {
         },
         {
             question: 'What value is returned when the item in indexOf() is not found',
-            option: [0, 1 , true, -1],
-            answer: -1
+            option: ['0', '1' , 'true', '-1'],
+            answer: '-1'
         },
         {
             question: 'One of these is not used to declare data a type in javascript',

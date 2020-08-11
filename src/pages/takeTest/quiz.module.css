@@ -52,9 +52,10 @@ font-size: 1em;
 }
 .footer {
     display: flex;
+    justify-content: space-between;
 }
 .button {
-    margin: 20px 10px 20px 630px!important;
+    margin: 20px 10px ;
     border-color: 0px;
     border-radius: 4px;
     border-width: 1px;
