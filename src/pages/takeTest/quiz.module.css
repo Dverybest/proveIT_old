@@ -1,25 +1,14 @@
-
-.roundName p{
-    margin: auto;
-    color: #fff;
-    font-weight:bold;
-    flex: 1;
-    font-size: 18px;
-}
 .qDiv{
-    min-width: 850px;
-    max-width: 950px;
-    /* min-height: 90vh; */
-    /* background-color: #000; */
-    background-color: #eee;
-    /* padding: 20px; */
+    min-width: 50%;
+    max-width: 60%;
+    /* background-color: #eee; */
+    background-color: blue;
     font-size: 1.4em;
     border-radius: 2px;
     margin: 30px 15px;
     text-align: center;
     border-width: 1px;
     border-color: #888;
-    /* overflow: auto; */
 
 }
 .contain{
@@ -92,4 +81,12 @@ h5 {
     /* background-color: blue; */
     padding: 10px;
     margin: auto;
+}
+@media(max-width: 425px) {
+    .qDiv{
+        min-width: 100%;
+        max-width: 100%;
+        
+    }
+   
 }

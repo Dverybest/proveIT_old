@@ -11,8 +11,8 @@ const Quiz = ({ test }) => {
     const [questionNumber, setquestionNumber] = useState(0);
     const [seletedAnswers, setSeletedAnswers] = useState([]);
     const [question, setQuestion] = useState([]);
-    const [progressBarStyle, setProgressBarStyle] = useState(1);
-    const [progressBarInterval, setProgressBarInterval] = useState(1);
+    const [progressBarStyle, setProgressBarStyle] = useState(0);
+    const [progressBarInterval, setProgressBarInterval] = useState(0);
     const [timer, setTimer] = useState(120);
     const [radButtons,setRadButtons]=useState({});
     useEffect(() => {
@@ -74,13 +74,13 @@ const Quiz = ({ test }) => {
                         <h3 className={styles.cardHeader} ></h3>
                         {/* Progress bar  */}
                         <div id={styles.myProgress} >
-                        <div id={styles.myBar} style={{width:`${progressBarStyle}%`}} ></div>
+                            <div id={styles.myBar} style={{width:`${progressBarStyle}%`}} ></div>
                         </div>
                         {/* progress bar counter */}
                         <p>{`${progressBarStyle}%`}</p>
 
                         <div className={styles.footer}>
-                           <div>
+                           <div style={{display:'flex'}}>
                                 <h5>{progressBarInterval}/10</h5>
                                 <h5>{timer}</h5>
                            </div>
@@ -89,7 +89,7 @@ const Quiz = ({ test }) => {
 
                     </div>
                 :
-                <div>Loading...</div>
+                    <div>Loading...</div>
             }
         </div>
 
