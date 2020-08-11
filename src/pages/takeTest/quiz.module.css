@@ -1,8 +1,7 @@
 .qDiv{
     min-width: 50%;
     max-width: 60%;
-    /* background-color: #eee; */
-    background-color: blue;
+    background-color: #eee;
     font-size: 1.4em;
     border-radius: 2px;
     margin: 30px 15px;
@@ -84,9 +83,18 @@ h5 {
 }
 @media(max-width: 425px) {
     .qDiv{
-        min-width: 100%;
-        max-width: 100%;
-        
+        min-width: 90%;
+        /* max-width: 100%; */ 
     }
-   
+   .footer {
+        flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    .cardHeader {
+    font-size: 0.7em;
+}
+#background {
+    font-size: 0.7em;
+}
 }

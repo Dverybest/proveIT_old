@@ -4,6 +4,10 @@ import styles from './result.module.css';
 
 const TestResult = (props)=>{
     
+    if (!props.location.state) {
+        props.history.push('/');
+        return <></>
+    }
     return (
         <div className={styles.result}>
             <Navbar backgroundColor={'rgba(58,121,9,1)'} style={{ paddingTop: 10, paddingBottom: 10, }} />
@@ -16,7 +20,7 @@ const TestResult = (props)=>{
                         <p>Skill Assesment Result</p>
                     </div>
                     <div className={styles.circle}>
-                        <span>100%</span>
+                        <span>{`${props.location.state.score}%`}</span>
                     </div>
                     <p className={styles.level}>Basic JavaScript</p>
                     <div className={styles.main_result_button_div}>
