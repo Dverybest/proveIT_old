@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import Navbar from '../nav/navbar';
 import styles from './test.module.css';
-import QuizModal from '../../components/quiz/quizModal';
+import Quiz from './quiz';
 
 const Test = (props) => {
-    const [quizModal, setQuizModal] = useState(false)
+    const [quiz, setQuiz] = useState(false)
 
     // handle Submit 
     const handleSubmitStart = () => {
@@ -12,8 +12,12 @@ const Test = (props) => {
         //     pathname: `/quiz/:${data.test}`,
         //     state: data
         // })
-        setQuizModal(true)
+        setQuiz(true)
     }
+
+
+
+
 
 
     if (!props.location.state) {
@@ -27,9 +31,9 @@ const Test = (props) => {
             <Navbar backgroundColor={'rgba(58,121,9,1)'} style={{ paddingTop: 10, paddingBottom: 10, }} />
 
             <div className={styles.contain}>
-                { quizModal ?
+                { quiz ?
 
-                    <QuizModal test={test} />
+                    <Quiz test={test} />
                     :
                     <div className={styles.qDiv}>
                         <p className={styles.brandLogo} style={{ color: 'black', textAlign: 'center' }}> &lt;PROVE/&gt;IT</p>
@@ -54,7 +58,7 @@ const Test = (props) => {
                             <p>Sharable result</p>
                         </div>
                         <hr />
-                        <button onClick={() => handleSubmitStart(true)}>Start</button>
+                        <button className={styles.button} onClick={() => handleSubmitStart(true)}>Start</button>
 
                     </div>
                 }
