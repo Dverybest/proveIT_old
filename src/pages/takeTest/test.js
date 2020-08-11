@@ -16,6 +16,10 @@ const Test = (props) => {
     }
 
 
+
+
+
+
     if (!props.location.state) {
         props.history.push('/');
         return <></>

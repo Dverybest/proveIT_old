@@ -10,27 +10,29 @@ const Quiz = ({ test }) => {
     const [questionNumber, setquestionNumber] = useState(0);
     const [seletedAnswers, setSeletedAnswers] = useState([]);
     const [question, setQuestion] = useState([]);
-    const [progressBarStyle, setProgressBarStyle] = useState(1)
+    const [progressBarStyle, setProgressBarStyle] = useState(1);
     const [progressBarInterval, setProgressBarInterval] = useState(1);
-    const [timer, setTimer] = useState(2000)
+    const [timer, setTimer] = useState(120);
 
     useEffect(() => {
         setQuestion(quiz[test.toLowerCase()]);
     }, []);
 
-
     const handleSelect = (e) => {
         setInput(e.target.value);
     }
+
+
     const handleSubmit = (e) => {
         setSeletedAnswers([...seletedAnswers,input]);
         questionNumber<question.length-1&&setquestionNumber(questionNumber+1);  
         questionNumber<question.length-1&&setProgressBarInterval(progressBarInterval+1);
-        setTimer(2000-1)
-        if(progressBarStyle == 1) {
-            setProgressBarStyle(progressBarStyle+1)
-
+        questionNumber<question.length-1&&setProgressBarStyle(progressBarStyle+10);
+        if(timer===120 ) {
+            timer--
+            console.log(timer)
         }
+        e.preventDefault();
 
     }
     console.log(question[questionNumber]);
@@ -61,8 +63,10 @@ const Quiz = ({ test }) => {
                         <h3 className={styles.cardHeader} ></h3>
                         {/* Progress bar  */}
                         <div id={styles.myProgress} >
-                            <div id={styles.myBar} ></div>
+                        <div id={styles.myBar} style={{width:`${progressBarStyle}%`}} ></div>
                         </div>
+                        {/* progress bar counter */}
+                        <p>{`${progressBarStyle}%`}</p>
 
                         <div className={styles.footer}>
                             <h5>{progressBarInterval}/10</h5>
