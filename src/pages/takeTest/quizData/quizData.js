@@ -56,6 +56,7 @@ var quiz = {
             answer: 'def'
 
         },
+
         {
             question: 'Which of these is a js method for accessing html element',
             option: ['getElementById', 'querySelector', 'getElementsByClassname', 'getElementByTag'],
@@ -79,16 +80,23 @@ var quiz = {
 
         },
         {
-            question: 'Which one is true about == and === operator',
-            option: ['=== operators compares only value while == compares the type', ],
-            answer: 'def'
+            question: 'What would the output of this code function() {var a = b = "3"; console.log((typeof a)); console.log((typeof b)) }',
+            option: ['string undefined', 'string string', 'undefined number', 'string undefined' ],
+            answer: ''
         },
         {
-            question: 'Which one is true about == and === operator',
-            option: ['=== operators compares only value while == compares the type', 'They both return a boolean value'],
-            answer: 'def'
+            question: 'What would be the output of this code console.log(0.1 + 0.2 == 0.3)',
+            option: ['true', 'false', 'not declared', 'null'],
+            answer: 'false'
+
+        },
+        {
+            question: 'What would be the output of this code console.log(false == 0);console.log(false === 0)',
+            option: ['true  false', 'true true', 'false true', 'undefined null'],
+            answer: 'true false'
 
         }
+        
         
         
 
