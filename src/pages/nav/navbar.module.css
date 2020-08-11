@@ -46,15 +46,15 @@
 }
 #my_sidenav {
     position: fixed;
-    width: 80vw;
     top: 0;
     right: 0;
     z-index: 3;
-    height: 100%;
     background-color:rgba(0, 0, 0, 0.9);
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
+    padding: 60px 60px 60px 20px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 #my_sidenav a,
    #my_sidenav span {

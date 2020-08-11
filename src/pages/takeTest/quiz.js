@@ -20,7 +20,6 @@ const Quiz = ({ test }) => {
         rad = quiz[test.toLowerCase()].reduce((prevValue,currentValue,index)=>{
             return {...prevValue,[`option${index}`]:false};
         },{});
-        console.log({rad});
         setRadButtons(rad);
         setQuestion(quiz[test.toLowerCase()]);
     }, []);
@@ -33,8 +32,12 @@ const Quiz = ({ test }) => {
 
 
     const handleSubmit = (e) => {
+
+       
+
         setSeletedAnswers([...seletedAnswers,input]);
         setInput("");
+        if (question.length - 1 == questionNumber) return;
         questionNumber<question.length-1&&setquestionNumber(questionNumber+1);  
         questionNumber<question.length-1&&setProgressBarInterval(progressBarInterval+1);
         questionNumber<question.length-1&&setProgressBarStyle(progressBarStyle+10);
@@ -46,7 +49,6 @@ const Quiz = ({ test }) => {
         // e.preventDefault();
 
     }
-    console.log({radButtons});
     return (
         <div className={styles.qDiv}>
             <p className={styles.brandLogo} style={{ color: 'black', textAlign: 'center' }}> &lt;PROVE/&gt;IT</p>
