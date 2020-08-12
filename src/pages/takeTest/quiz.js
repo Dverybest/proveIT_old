@@ -3,24 +3,26 @@ import logo from '../../assets/intro.png';
 import Navbar from '../nav/navbar';
 import { quiz } from './quizData/quizData';
 import styles from './quiz.module.css';
+import {useHistory} from 'react-router-dom'
 
-
+let score = 0;
 const Quiz = ({ test }) => {
     let rad={};
+    let history = useHistory();
     const [input, setInput] = useState('');
     const [questionNumber, setquestionNumber] = useState(0);
     const [seletedAnswers, setSeletedAnswers] = useState([]);
+    
     const [question, setQuestion] = useState([]);
     const [progressBarStyle, setProgressBarStyle] = useState(0);
     const [progressBarInterval, setProgressBarInterval] = useState(0);
     let [timer, setTimer] = useState(120);
     const [radButtons,setRadButtons]=useState({});
+   
     useEffect(() => {
-
         rad = quiz[test.toLowerCase()].reduce((prevValue,currentValue,index)=>{
             return {...prevValue,[`option${index}`]:false};
         },{});
-        console.log({rad});
         setRadButtons(rad);
         setQuestion(quiz[test.toLowerCase()]);
     }, []);
@@ -33,8 +35,21 @@ const Quiz = ({ test }) => {
 
 
     const handleSubmit = (e) => {
-        setSeletedAnswers([...seletedAnswers,input]);
+
+        // setSeletedAnswers([...seletedAnswers,input]);
+        console.log(questionNumber, question[questionNumber].answer)
         setInput("");
+        if (input == question[questionNumber].answer){
+            ++score
+        }
+        console.log({ score })
+        if (question.length - 1 == questionNumber){
+            history.push({
+                pathname: `/take-test/test-result`,
+                state: { score: Math.floor((score / (question.length - 1)) * 100)}
+            });
+            return;
+        }
         questionNumber<question.length-1&&setquestionNumber(questionNumber+1);  
         questionNumber<question.length-1&&setProgressBarInterval(progressBarInterval+1);
         questionNumber<question.length-1&&setProgressBarStyle(progressBarStyle+10);
@@ -50,7 +65,6 @@ const Quiz = ({ test }) => {
         setTimeout(count, 1000);
      
     }
-    console.log({radButtons});
     return (
         <div className={styles.qDiv}>
             <p className={styles.brandLogo} style={{ color: 'black', textAlign: 'center' }}> &lt;PROVE/&gt;IT</p>
