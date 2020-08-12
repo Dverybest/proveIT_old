@@ -58,6 +58,8 @@ font-size: 1em;
     padding: 13px 15px 13px 35px;
     border-bottom: solid 1px #b3b3b3;
     font-size: 1em;
+    display: flex;
+    align-items: center;
 }
 .formCheckInput {
     height: 23px;
@@ -81,7 +83,7 @@ h5 {
     padding: 10px;
     margin: auto;
 }
-@media(max-width: 425px) {
+@media(max-width: 600px) {
     .qDiv{
         min-width: 90%;
         /* max-width: 100%; */ 
@@ -96,5 +98,9 @@ h5 {
 }
 #background {
     font-size: 0.7em;
+}
+.formCheckInput {
+    height: 15px;
+    width: 15px;
 }
 }

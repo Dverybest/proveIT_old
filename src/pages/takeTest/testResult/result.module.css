@@ -29,8 +29,6 @@
     align-items: center;
     justify-content: start;
     margin: -150px 30px 0px 30px;
-
-  
     border: 1px solid #888;
     border-radius: 3px;
 }
@@ -53,6 +51,10 @@
     font-size: 20px;
     padding: 10px;
     margin-bottom: 20px;
+}
+.main_result_title_div p{
+    margin: 0;
+    font-weight: 400;
 }
 .circle{
     height: 150px;

@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import logo from '../../assets/intro.png';
-import Navbar from '../nav/navbar';
 import { quiz } from './quizData/quizData';
 import styles from './quiz.module.css';
 import {useHistory} from 'react-router-dom'
@@ -11,7 +9,6 @@ const Quiz = ({ test }) => {
     let history = useHistory();
     const [input, setInput] = useState('');
     const [questionNumber, setquestionNumber] = useState(0);
-    const [seletedAnswers, setSeletedAnswers] = useState([]);
     
     const [question, setQuestion] = useState([]);
     const [progressBarStyle, setProgressBarStyle] = useState(1);
@@ -36,7 +33,6 @@ const Quiz = ({ test }) => {
 
     const handleSubmit = (e) => {
 
-        // setSeletedAnswers([...seletedAnswers,input]);
         console.log(questionNumber, question[questionNumber].answer)
         setInput("");
         if (input == question[questionNumber].answer){
@@ -54,15 +50,15 @@ const Quiz = ({ test }) => {
         questionNumber<question.length-1&&setProgressBarInterval(progressBarInterval+1);
         questionNumber<question.length-1&&setProgressBarStyle(progressBarStyle+10);
         setRadButtons(rad);
-        const count = function() {
-            timer--
-            toString(timer)
-            console.log('checking', timer)
-                if(timer > 0 ) {
-                    setTimeout(count, 1000)
-                }
-        }
-        setTimeout(count, 1000);
+        // const count = function() {
+        //     timer--
+        //     toString(timer)
+        //     console.log('checking', timer)
+        //         if(timer > 0 ) {
+        //             setTimeout(count, 1000)
+        //         }
+        // }
+        // setTimeout(count, 1000);
      
     }
     return (
