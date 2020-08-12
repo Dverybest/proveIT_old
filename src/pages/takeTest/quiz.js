@@ -13,7 +13,7 @@ const Quiz = ({ test }) => {
     const [question, setQuestion] = useState([]);
     const [progressBarStyle, setProgressBarStyle] = useState(0);
     const [progressBarInterval, setProgressBarInterval] = useState(0);
-    const [timer, setTimer] = useState(120);
+    let [timer, setTimer] = useState(120);
     const [radButtons,setRadButtons]=useState({});
     useEffect(() => {
 
@@ -39,12 +39,16 @@ const Quiz = ({ test }) => {
         questionNumber<question.length-1&&setProgressBarInterval(progressBarInterval+1);
         questionNumber<question.length-1&&setProgressBarStyle(progressBarStyle+10);
         setRadButtons(rad);
-        // if(timer===120 ) {
-        //     timer--
-        //     console.log(timer)
-        // }
-        // e.preventDefault();
-
+        const count = function() {
+            timer--
+            toString(timer)
+            console.log('checking', timer)
+                if(timer > 0 ) {
+                    setTimeout(count, 1000)
+                }
+        }
+        setTimeout(count, 1000);
+     
     }
     console.log({radButtons});
     return (
@@ -80,7 +84,7 @@ const Quiz = ({ test }) => {
                         <p>{`${progressBarStyle}%`}</p>
 
                         <div className={styles.footer}>
-                           <div style={{display:'flex'}}>
+                           <div style={{display:'flex'}}>  
                                 <h5>{progressBarInterval}/10</h5>
                                 <h5>{timer}</h5>
                            </div>
