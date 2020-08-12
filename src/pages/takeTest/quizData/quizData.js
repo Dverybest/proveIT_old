@@ -58,7 +58,7 @@ var quiz = {
         },
 
         {
-            question: 'Which of these is a js method for accessing html element',
+            question: 'Which of these is not a js method for accessing html element',
             option: ['getElementById', 'querySelector', 'getElementsByClassname', 'getElementByTag'],
             answer: 'getElementByTag'
         },

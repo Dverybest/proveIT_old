@@ -14,9 +14,9 @@ const Quiz = ({ test }) => {
     const [seletedAnswers, setSeletedAnswers] = useState([]);
     
     const [question, setQuestion] = useState([]);
-    const [progressBarStyle, setProgressBarStyle] = useState(0);
-    const [progressBarInterval, setProgressBarInterval] = useState(0);
-    const [timer, setTimer] = useState(120);
+    const [progressBarStyle, setProgressBarStyle] = useState(1);
+    const [progressBarInterval, setProgressBarInterval] = useState(1);
+    let [timer, setTimer] = useState(120);
     const [radButtons,setRadButtons]=useState({});
    
     useEffect(() => {
@@ -54,12 +54,16 @@ const Quiz = ({ test }) => {
         questionNumber<question.length-1&&setProgressBarInterval(progressBarInterval+1);
         questionNumber<question.length-1&&setProgressBarStyle(progressBarStyle+10);
         setRadButtons(rad);
-        // if(timer===120 ) {
-        //     timer--
-        //     console.log(timer)
-        // }
-        // e.preventDefault();
-
+        const count = function() {
+            timer--
+            toString(timer)
+            console.log('checking', timer)
+                if(timer > 0 ) {
+                    setTimeout(count, 1000)
+                }
+        }
+        setTimeout(count, 1000);
+     
     }
     return (
         <div className={styles.qDiv}>
@@ -91,11 +95,11 @@ const Quiz = ({ test }) => {
                             <div id={styles.myBar} style={{width:`${progressBarStyle}%`}} ></div>
                         </div>
                         {/* progress bar counter */}
-                        <p>{`${progressBarStyle}%`}</p>
+                        {/* <p>{`${progressBarStyle}%`}</p> */}
 
                         <div className={styles.footer}>
-                           <div style={{display:'flex'}}>
-                                <h5>{progressBarInterval}/10</h5>
+                           <div style={{display:'flex'}}>  
+                        <h5>{questionNumber+1}/{question.length}</h5>
                                 <h5>{timer}</h5>
                            </div>
                             <button href="#" onClick={handleSubmit} className={styles.button } style={{backgroundColor: input==""? "#808080" : "rgba(58,121,9,1)"}} disabled={input==""} >{question.length-1!=questionNumber?'Next':'Finish'}</button>
