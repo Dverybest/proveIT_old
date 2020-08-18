@@ -4,6 +4,7 @@ import styles from './navbar.module.css';
 import { Link, withRouter } from 'react-router-dom';
 
 const NavBar = ({ getStarted, backgroundColor, style }) => {
+
     let customStyle = backgroundColor ? { color: 'white', fontSize: 18 } : {}
     const [toggleNav, setToggleNav] = useState(false)
 

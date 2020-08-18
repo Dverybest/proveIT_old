@@ -13,8 +13,6 @@ const Home = (props)=> {
             pathname: `/take-test/${data.test}`,
             state: data
         });
-        console.log("checking props", props)
-        console.log(props.history)
     }
     return (
         <div className={styles.home} >
@@ -30,7 +28,7 @@ const Home = (props)=> {
                 QuizModal&&<
             } */}
             <NavBar getStarted={() => setOpenModal(true)}/>
-            <header className={styles.header,'container px-0'}>
+            <header className={`${styles.header} container px-0`}>
                 <div className='row px-0'>
                     <img src={logo} className={styles.intro} alt="logo" />
                     <div className={styles.headerTextContainer}>

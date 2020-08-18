@@ -24,7 +24,7 @@ const TestResult = (props)=>{
                     </div>
                     <p className={styles.level}>Basic JavaScript</p>
                     <div className={styles.main_result_button_div}>
-                        <button className={styles.button}>Continue to the next level</button>
+                        <button className={styles.button}>Share</button>
                     </div>
                 </div>
             </div>
