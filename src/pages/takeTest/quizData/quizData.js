@@ -27,6 +27,22 @@ var quiz = {
             answer: '<strong>'
         },
         {
+            question: 'One amongst these browsers does not support HTML5',
+            option: ['chrome', 'safari', 'firefox', 'internet explorer'],
+            answer: 'internet explorer'
+        },
+        {
+            question: 'What is the correct HTML element for inserting a line break?            ' ,
+            option: ['<br>', '<break>', '<lb>', '</lb>'],
+            answer: '<br>'
+
+        },
+        {
+            question: 'Which character is used to indicate an end tag? ',
+            option: ['<', '/', '`', '</>'],
+            answer: '</>'
+        },
+        {
             question: 'one of these is not a html entity characters',
             option: ['$', '&nbsp', '&lt', '&gt'],
             answer: '$'
@@ -104,43 +120,57 @@ var quiz = {
     ],
     css: [
         {
-            question: 'one of these is a way to link css to a file',
-            option: ['inline', 'external', 'internal', 'outer']
+            question: 'one of these is not a way to link css to a file',
+            option: ['inline', 'external', 'internal', 'outer'],
+            answer: 'outer'
+        },
+        {
+            question: 'Where in an HTML document is the correct place to link a an external style sheet?',
+            option: ['body', 'head', 'after the body', 'end of the document'],
+            answer: 'head'
         },
         {
             question: 'Which of the css linking method has the heightest precedence',
-            option: ['inline css', 'external css', 'internal css', 'embeded css']
+            option: ['inline css', 'external css', 'internal css', 'embeded css'],
+            answer: 'inline css'
+
         },
         {
             question: 'What is the css !important rule used for?',
             option: ['Shows that a class is visible', 'shows that the id should be visible', 'shows that the property overides everyother part in the page',
-             'none of the abover', '']
+             'none of the abover', ''],
+            answer: 'shows that the property overides everyother part in the page'
+
         },
         {
             question: 'Which one is not a css selector',
-            option: ['tag selector', 'type selector', 'id selector', 'class selector', ],
-            answer: ''
+            option: ['tag selector', 'type selector', 'id selector', 'class selector' ],
+            answer: 'tag selector'
 
         },
         {
             question: 'Which one is not color value type',
-            option: ['hsl', 'rgba()', 'blue', '#000'],
-            answer: ''
+            option: ['hsl', 'rgba()', 'html hue', '#000'],
+            answer: 'html hue'
 
         },
         {
             question: 'Which is a way to create rounded corners in css',
-            option: ['border style', 'background-redius', 'borde-radius', 'border'],
-            answer: ''
+            option: ['border style', 'background-redius', 'border-radius', 'border'],
+            answer: 'border-radius'
         },
-        {   question: 'css flex-box properties',
+        {   question: 'Which is not a css flex-box properties',
             option: ['justify-content', 'flex-flow', 'flow-role', 'align-content'],
+            answer: 'flex-role'
+        },
+        {
+            question: 'tag selector',
+            option: ['{body: color=blue}', 'body{color: blue}', '{body;color: blue;}', 'body:color=black;'],
             answer: ''
         },
         {
-            question: '',
-            option: [],
-            answer: ''
+            question: 'How do you insert a single line comment in a CSS file?',
+            option: ['// this is a comment', '//this is a commit //', '/* this is a comment */', '*this is a comment*' ]
         }
     ]
 
