@@ -2,12 +2,19 @@ import React,{useState} from 'react';
 import logo from '../../assets/intro.png';
 import NavBar from '../nav/navbar';
 import styles from './home.module.css';
+import {connect} from 'react-redux';
+import {home } from './homeAction';
 
 const Home = (props)=> {
-
+console.log("home",props.sample)
     const [openModal,setOpenModal] = useState(false);
    
     const handleNavigate=(data)=>{
+        console.log("consoling ")
+
+        // data from redux store 
+        props.home(data)
+
         setOpenModal(false);
         props.history.push({
             pathname: `/take-test/${data.test}`,
@@ -43,6 +50,8 @@ const Home = (props)=> {
 
 const Modal = ({close,navigate})=>{
    
+
+    
     const [data,setData] = useState({name:'',test:'',level:''});
     // const [quiz, setQuiz] = useState(false)
 
@@ -75,7 +84,7 @@ const Modal = ({close,navigate})=>{
                     <div className={styles.modalDiv}>
                         <label htmlFor="test">Select Test:</label>
                         <select id='test' name='test'  required onChange={handleSelect}>
-                            <option></option>
+                            <option></option>sample
                             <option value='JavaScript'>JavaScript</option>
                             <option value='HTML'>HTML</option>
                             <option value='CSS'>CSS</option>
@@ -96,4 +105,9 @@ const Modal = ({close,navigate})=>{
         </div>
     )
 }
-export default Home;
+
+// getting data from store 
+const mapStateToProps=(store)=>{
+    return {sample: store.sample, kelah: store}
+}
+export default connect(mapStateToProps,{home})(Home);
