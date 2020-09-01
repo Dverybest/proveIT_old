@@ -31,7 +31,7 @@ const Test = (props) => {
                     <Quiz test={test} />
                     :
                     <div className={styles.qDiv}>
-                        <p className={styles.brandLogo} style={{ color: 'black', textAlign: 'center' }}> &lt;PROVE/&gt;IT</p>
+                        <p className={styles.brandLogo} style={{ color: 'black', textAlign: 'center' }}> &lt;ProveIT/&gt;</p>
                         <p>{`${level} ${test} Skills Assessment`}</p>
                         <hr />
                         <div style={{ textAlign: 'left' }}>

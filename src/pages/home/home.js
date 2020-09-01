@@ -1,17 +1,14 @@
 import React,{useState} from 'react';
-import logo from '../../assets/intro.png';
+import logo from '../../assets/coder.svg';
 import NavBar from '../nav/navbar';
 import styles from './home.module.css';
 import {connect} from 'react-redux';
 import {home } from './homeAction';
 
 const Home = (props)=> {
-console.log("home",props.sample)
     const [openModal,setOpenModal] = useState(false);
    
     const handleNavigate=(data)=>{
-        console.log("consoling ")
-
         // data from redux store 
         props.home(data)
 
@@ -34,13 +31,17 @@ console.log("home",props.sample)
             {/* {
                 QuizModal&&<
             } */}
-            <NavBar getStarted={() => setOpenModal(true)}/>
+            <NavBar/>
             <header className={`${styles.header} container px-0`}>
-                <div className='row px-0'>
-                    <img src={logo} className={styles.intro} alt="logo" />
-                    <div className={styles.headerTextContainer}>
+                <div className={'row px-0 mx-0'}>
+                    
+                    <div className={`col-md-5 ${styles.headerTextContainer}`}>
                         <p className={styles.headerText}>Test your programming knowledge and skills</p>
+                        <p>Complete different levels of test to prove your knowledge and skill in programming  </p>
                         <button className={styles.navButton} onClick={()=>setOpenModal(true)}>Get Started</button>
+                    </div>
+                    <div className={'col-md-7'}>
+                        <img src={logo} className={styles.intro} alt="logo" />
                     </div>
                 </div>
             </header>

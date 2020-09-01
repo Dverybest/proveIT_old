@@ -1,22 +1,26 @@
 .home{
     min-width: 100vw;
     overflow-x: hidden;
+   
     /* background: rgb(2,0,36); */
-    background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(58,121,9,1) 0%, rgba(255,255,255,1) 48%);
+    background: linear-gradient(145deg, rgba(58,121,9,0.3) 0%, rgba(255,255,255,1) 60%);
+    background-repeat: no-repeat;
+    background-size: cover;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-size: calc(10px + 2vmin);
+    font-size: 25px;
 }
 .header{
     display: flex;
-    padding: 5px 20px;
+    flex: 1;
+    padding: 10px 20px;
     align-items: center;
     justify-content: center;
 }
 .intro{
     height: auto;
-    max-width: 80vmin;
+    max-width: 80vmin !important;
 }
 .headerTextContainer{
     display: flex;
@@ -25,18 +29,16 @@
     flex:1;
 }
 .headerText{
-    font-size: 54px;
-    font-weight: bolder;
-    line-height: 80px;
+    font-size: 34px;
+    font-weight: bold;
+    line-height: 40px;
     font-family: 'Poppins', sans-serif;
     color: #282c34;
-    max-width: 80vw;
 }
 .navButton{
     color:  #ffffff;
-    border-radius: 5px;
+    border-radius: 100px;
     border-width: 1px;
-    border-color: rgba(58,121,9,1);
     background-color: rgba(58,121,9,1);
     font-size: 20px;
     max-width: 200px;

@@ -64,7 +64,7 @@ const Quiz = ({test}) => {
     }
     return (
         <div className={styles.qDiv}>
-            <p className={styles.brandLogo} style={{ color: 'black', textAlign: 'center' }}> &lt;PROVE/&gt;IT</p>
+            <p className={styles.brandLogo} style={{ color: 'black', textAlign: 'center' }}> &lt;ProveIT/&gt;</p>
             <p>{`${test} Skills Assessment`}</p>
             {
                 question.length !== 0 ?
